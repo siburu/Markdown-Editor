@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Markdown Editor</title>
+	</head>
+	<body><div id="content"></div></body>
+	<script>
+var ipc = require('ipc');
+ipc.on('marked-data-response', function(markedData) {
+	document.getElementById('content').innerHTML = markedData;
+});
+ipc.send('marked-data-request');
+	</script>
+</html>
