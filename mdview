@@ -1,0 +1,4 @@
+#!/bin/bash
+
+APPDIR=$(dirname $0)
+DATA=$1 electron $APPDIR
